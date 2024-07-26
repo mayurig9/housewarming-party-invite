@@ -11,19 +11,20 @@
             width: 100%;
             height: 100%;
             display: flex;
-            justify-content: flex-start; /* Align content to the left */
-            align-items: flex-start; /* Align content to the top */
-            background: url('background.jpg') no-repeat center center scroll;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
             font-family: Arial, sans-serif;
+            box-sizing: border-box;
         }
         .form-container {
             background: rgba(255, 255, 255, 0.9);
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 10px; /* Rounded corners for card effect */
             width: 90%;
             max-width: 600px;
-            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for card effect */
             position: relative;
             box-sizing: border-box;
         }
@@ -44,8 +45,6 @@
             border: none;
         }
     </style>
-    
-    
 </head>
 <body>
     <div class="form-container">
