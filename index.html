@@ -11,17 +11,22 @@
             width: 100%;
             height: 100%;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            background: url('background.jpg') no-repeat center center fixed;
+            justify-content: flex-start; /* Align content to the left */
+            align-items:center; /* Align content to the top */
+            background: url('background.jpg') no-repeat center center scroll;
             background-size: cover;
             font-family: Arial, sans-serif;
         }
         .container {
-            text-align: center;
-            margin-right: 55%;
-            padding-left: 2%;
-            
+            text-align: center; /* Align text to the left */
+            padding: 2%;
+            box-sizing: border-box;
+            width: 100%; /* Adjust width to full width */
+            max-width: 800px; /* Optional: limit the maximum width */
+        }
+        h1, h2, h4 {
+            margin: 0;
+            padding: 0;
         }
         h1 {
             color: #4CAF50;
@@ -31,7 +36,7 @@
             color: #4CAF50;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
-        h4{
+        h4 {
             color: #a429af;
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 120%;
@@ -53,30 +58,43 @@
         }
         .details {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
             margin-top: 1rem;
         }
         .details div {
-            flex: 1;
-            text-align: center;
-            margin: 0 1rem;
+            text-align: center; /* Center text within each div */
+            margin: 0.5rem 0;
         }
         .details p {
             margin: 0.5rem 0;
-
         }
-        .details h3{
+        .details h3 {
             font-family: 'Comic Sans MS', 'Comic Sans';
             color: #be0505;
         }
- 
+    
+        @media (min-width: 768px) {
+            .details {
+                flex-direction: row;
+                align-items: flex-start; /* Align items to the top on larger screens */
+            }
+            .details div {
+                text-align: center; /* Left-align text on larger screens */
+                margin: 0 6rem; /* Adjust margins for larger screens */
+            }
+        }
     </style>
+    
+    
 </head>
 <body>
     <div class="container">
         <h2>You're invited to join us for a</h2>
+        <br/>
         <h1>HOUSEWARMING PARTY!</h1>
         
+        <br/>
         <br/>
         
         <p>We are over the moon to share that we have finally settled into our new home!</p>
