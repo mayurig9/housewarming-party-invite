@@ -11,8 +11,8 @@
             width: 100%;
             height: 100%;
             display: flex;
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
+            justify-content: center;
+            align-items: center;
             background: url('background.jpg') no-repeat center center scroll;
             background-size: cover;
             font-family: Arial, sans-serif;
@@ -22,10 +22,10 @@
             text-align: center;
             padding: 2%;
             box-sizing: border-box;
-            width: 90%; /* Adjust width to full width */
-            max-width: 800px; /* Optional: limit the maximum width */
-            background: rgba(255, 255, 255, 0.8); /* Add a background for readability */
-            border-radius: 10px; /* Optional: round corners */
+            width: 90%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
         }
         h1, h2, h4 {
             margin: 0;
@@ -35,16 +35,18 @@
             color: #4CAF50;
             font-family: Georgia, 'Times New Roman', Times, serif;
             padding-bottom: 5%;
+            font-size: 2em;
         }
         h2 {
             color: #4CAF50;
             font-family: Georgia, 'Times New Roman', Times, serif;
             padding-bottom: 2%;
+            font-size: 1.5em;
         }
         h4 {
             color: #a429af;
             font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 120%;
+            font-size: 1.2em;
             padding-top: 3%;
         }
         button {
@@ -60,17 +62,17 @@
             color: #333;
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-style: italic;
-            font-size: 110%;
+            font-size: 1.1em;
         }
         .details {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center items horizontally */
-            justify-content: center; /* Center items vertically */
+            align-items: center;
+            justify-content: center;
             margin-top: 1rem;
         }
         .details div {
-            text-align: center; /* Center text within each div */
+            text-align: center;
             margin: 0.5rem 0;
         }
         .details p {
@@ -79,17 +81,40 @@
         .details h3 {
             font-family: 'Comic Sans MS', 'Comic Sans';
             color: #be0505;
+            font-size: 1.2em;
         }
-    
+
         @media (min-width: 768px) {
             .details {
                 flex-direction: row;
-                align-items: flex-start; /* Align items to the top on larger screens */
-                justify-content: center; /* Center items horizontally on larger screens */
+                align-items: flex-start;
+                justify-content: center;
             }
             .details div {
-                text-align: center; /* Center text on larger screens */
-                margin: 0 2rem; /* Adjust margins for larger screens */
+                text-align: center;
+                margin: 0 2rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            h4 {
+                font-size: 1em;
+            }
+            .details h3 {
+                font-size: 1em;
+            }
+            .details p {
+                font-size: 0.9em;
+            }
+            button {
+                font-size: 0.9em;
+                padding: 0.5rem 1rem;
             }
         }
     </style>
